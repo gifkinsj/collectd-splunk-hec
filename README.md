@@ -5,7 +5,9 @@ This is a simple repo which can be used to deploy a container which uses collect
 ### Configuring collectd (pre-build)
 In order to configure this image for your use, you'll need to alter the `OUTPUTS` section of `./config/collectd.conf.d/splunk.conf` to include the the detail of your HEC endpoint.
 
-Read the following for further information: http://docs.splunk.com/Documentation/Splunk/7.2.0/Metrics/GetMetricsInCollectd
+Read the following for further information: http://docs.splunk.com/Documentation/Splunk/7.2.0/Metrics/GetMetricsInCollectd.
+
+*Note: Pay special attention to the port you define in the collectd config, and the port you configure for the Splunk HEC interface. You'll also need to be mindful of whether you use SSL or not.
 
 ### Building the image
 To build the image, download the repo and use the following: 
